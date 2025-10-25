@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+void lastTwoReversed(char *str, char *result) 
+{
+    int len = strlen(str);
+    if (len < 2) {
+        result[0] = '\0';
+        return;
+    }
+
+    sprintf(result, "%c %c", str[len - 1], str[len - 2]);
+}
+
+int main()
+{
+    char word[] = "bat";
+    char result[10];
+
+    lastTwoReversed(word, result);
+    printf("%s\n", result);
+
+    return 0;
+}
